@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML5 Tetris</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css' />
+        <link rel='stylesheet' href='style.css' />
+    </head>
+    <body class="grey darken-4">
+        <audio id="clearsound" src="sound/pop.ogg" preload="auto"></audio>
+        <div class="container">
+          <div class="row">
+            <canvas id="canvas" class="col s11 white center" height="420"></canvas>
+            <div id="cleared_lines" class="col s1 white-text">0</div>
+          </div>
+          <hr>
+          <div class="row">
+            <a class="col s3 btn grey darken-1" onclick="keyPress('left');render();">←</a>
+            <a class="col s3 btn grey darken-1" onclick="keyPress('down');render();">↓</a>
+            <a class="col s3 btn grey darken-1" onclick="keyPress('right');render();">→</a>
+            <a class="col s3 btn grey darken-1" onclick="keyPress('rotate');render();">回転</a>
+          </div>
+        </div>
+        <script src='js/tetris.js'></script>
+        <script src='js/render.js'></script>
+        <script src='js/controller.js'></script>
+    </body>
+</html>
